@@ -9,7 +9,7 @@
  * @author     Osman Üngür <osmanungur@gmail.com>
  * @copyright  2009-2015 Osman Üngür
  * @license    http://opensource.org/licenses/MIT MIT License
- * @link       http://github.com/o/sitemap-php
+ * @link       http://github.com/o/sitemap-php  
  */
 class Sitemap {
 
@@ -187,9 +187,9 @@ class Sitemap {
 		$this->incCurrentItem();
 		$this->getWriter()->startElement('url');
 		$this->getWriter()->writeElement('loc', $this->getDomain() . $loc);
-		$this->getWriter()->writeElement('priority', $priority);
+		// $this->getWriter()->writeElement('priority', $priority);
 		if ($changefreq)
-			$this->getWriter()->writeElement('changefreq', $changefreq);
+			//$this->getWriter()->writeElement('changefreq', $changefreq);
 		if ($lastmod)
 			$this->getWriter()->writeElement('lastmod', $this->getLastModifiedDate($lastmod));
 		$this->getWriter()->endElement();
